@@ -14,7 +14,7 @@ Beta=chi_f;
 
 % Actual parameters (gold or silver);
 % Medium 2 : silver. Replace Agbb by Aubb if needed for gold parameters.
-[epsilon(2),chi_b(2),chi_f(2),w_p(2),Beta(2)]=epsInAsSb(lambda);
+[epsilon(2),chi_b(2),chi_f(2),w_p(2),Beta(2)]=epsDNL(lambda);
 
 % Purely local solution - put Beta TO ZERO for the material you want
 % to be considered as local and uncomment the following line:
@@ -27,7 +27,7 @@ Type=[1,2,3];
 
 % 4. Thickness of the different layers
 
-hauteur=[1000,50,1000];
+hauteur=[1000,75,1000];
 
 % End of the structure description
 % polarization is always p (TM) otherwise no nonlocal effect takes place.

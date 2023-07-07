@@ -3,11 +3,14 @@
 % DEvol(@f,budget,Xmin,Xmax,population)
 %  où @f est la fonction de coût (ne pas oublier le '@')
 %  budget, ben, le budget alloué à l'optimisation en nombre d'évaluations de la fonction de coût
-%  Xmin et Xmax deux vecteurs de même taille (attention) contenant les bornes min et max du domaine d'exploration
+%  Xmin et Xmax deux vecteurs de même taille (attention) contenant les bornes min et max du domaine d exploration
 %   et qui sont utilisés pour le tirage de la génération initiale.
 %  population, la taille de la population (30 de façon standard)
 
 function [best,convergence]=DEvol(f_cout,budget,Xmin,Xmax,tribu)
+
+
+global eps_inf,n0,m,gam
 
 % Paramètres de DE - paramètres potentiels de la fonction
   cr=0.5; % Chances de passer les paramètres du parent à son rejeton.
