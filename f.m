@@ -16,11 +16,10 @@ n_0 = X(2);
 m_eff = X(3);
 gam = X(4);
 
-Npoints = size(Ref)(1)
-disp(Npoints)
+Npoints = size(Ref)(1);
 
 # Angle of incidence, in degrees.
-theta = 45
+theta = 45;
 
  r = zeros(Npoints,1);
  t = r;

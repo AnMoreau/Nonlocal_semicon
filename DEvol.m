@@ -9,9 +9,6 @@
 
 function [best,convergence]=DEvol(f_cout,budget,Xmin,Xmax,tribu)
 
-
-global eps_inf,n0,m,gam
-
 % Paramètres de DE - paramètres potentiels de la fonction
   cr=0.5; % Chances de passer les paramètres du parent à son rejeton.
   f1=0.9;
@@ -53,12 +50,13 @@ global eps_inf,n0,m,gam
     generation=generation+1;
     disp("Generation:")
     disp(generation)
-    disp(evaluation)
+#    disp(evaluation)
 
     [fmin,ibest]=min(f);
     best=X(ibest,:);
     convergence(generation)=fmin;
-
+    disp(fmin)
+    disp(best)
   end
 
   convergence=convergence(1:generation);
